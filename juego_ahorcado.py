@@ -39,10 +39,10 @@ def juego_ahorcado():
             letras_adivinadas.append(adivinanza)
  
             if adivinanza in palabra_secreta:
-                print(f'¡Muy bien has acertado,la letra {adivinanza} está presente en la palabra!')
+                print(f'¡Muy bien has acertado,la letra "{adivinanza}" está presente en la palabra!')
             else:
                 intentos -= 1
-                print(f'Lo siento mucho la letra {adivinanza} no esta presente en la palabra secreta')
+                print(f'Lo siento mucho la letra "{adivinanza}" no esta presente en la palabra secreta')
                 print(f'Te quedan {intentos} intentos')
 
         progreso_actual = mostrar_progreso(palabra_secreta, letras_adivinadas)
@@ -50,8 +50,8 @@ def juego_ahorcado():
 
         if '_.' not in progreso_actual:
             juego_terminado = True
-            print(f'¡Felicitaciones has ganado! La palabra secreta es {palabra_secreta}')
+            print(f'¡Felicitaciones has ganado! La palabra secreta es "{palabra_secreta}"')
     if intentos == 0:
-        print(f'Lo siento se agotaron los intentos,la palabra secreta es: {palabra_secreta}')
+        print(f'Lo siento se agotaron los intentos,la palabra secreta es: "{palabra_secreta}"')
 
 juego_ahorcado()
