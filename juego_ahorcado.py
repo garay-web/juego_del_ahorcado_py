@@ -50,8 +50,10 @@ def juego_ahorcado():
 
         if '_.' not in progreso_actual:
             juego_terminado = True
+            palabra_secreta =palabra_secreta.capitalize()
             print(f'¡Felicitaciones has ganado! La palabra secreta es "{palabra_secreta}"')
     if intentos == 0:
+        palabra_secreta =palabra_secreta.capitalize()
         print(f'Lo siento se agotaron los intentos,la palabra secreta es: "{palabra_secreta}"')
 
 juego_ahorcado()
